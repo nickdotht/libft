@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_capitalize.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/23 12:42:09 by jrameau           #+#    #+#             */
-/*   Updated: 2016/09/23 12:42:11 by jrameau          ###   ########.fr       */
+/*   Created: 2016/09/29 15:51:24 by jrameau           #+#    #+#             */
+/*   Updated: 2016/09/29 15:51:26 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-int		ft_isupper(int c)
+char	*ft_capitalize(char *s)
 {
-	return (c <= 'Z' && c >= 'A');
+	char	*new;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	new = ft_strnew(ft_strlen(s));
+	new[0] = ft_toupper(s[0]);
+	i = 0;
+	while (*(s + ++i))
+		if (!ft_isalnum(s[i - 1]) && ft_isalnum(s[i]))
+			new[i] = ft_toupper(s[i]);
+		else
+			new[i] = s[i];
+	return (new);
 }
