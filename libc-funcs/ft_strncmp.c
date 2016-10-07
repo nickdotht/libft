@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_capitalize.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 15:51:24 by jrameau           #+#    #+#             */
-/*   Updated: 2016/09/29 15:51:26 by jrameau          ###   ########.fr       */
+/*   Created: 2016/09/23 04:22:10 by jrameau           #+#    #+#             */
+/*   Updated: 2016/09/23 04:22:11 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_capitalize(char *s)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*new;
 	int		i;
 
-	if (!s)
-		return (NULL);
-	new = ft_strnew(ft_strlen(s));
-	new[0] = ft_toupper(s[0]);
 	i = 0;
-	while (*(s + ++i))
-		if (!ft_isalnum(s[i - 1]) && ft_isalnum(s[i]))
-			new[i] = ft_toupper(s[i]);
-		else
-			new[i] = s[i];
-	return (new);
+	while (*(s1 + i) && *(s1 + i) == *(s2 + i) && i < (int)n - 1)
+		i++;
+	if (n)
+		return (*((unsigned char *)s1 + i) - *((unsigned char *)s2 + i));
+	return (0);
 }

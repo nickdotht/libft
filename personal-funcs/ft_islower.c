@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/29 15:20:20 by jrameau           #+#    #+#             */
-/*   Updated: 2016/09/29 15:20:23 by jrameau          ###   ########.fr       */
+/*   Created: 2016/09/23 12:45:32 by jrameau           #+#    #+#             */
+/*   Updated: 2016/09/23 12:45:33 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-char	*ft_strndup(const char *s1, size_t n)
+int		ft_islower(int c)
 {
-	char	*tmp;
-
-	if (!(tmp = ft_strnew(n)))
-		return (NULL);
-	ft_strncpy(tmp, s1, n);
-	return (tmp);
+	return (c <= 'z' && c >= 'a');
 }
