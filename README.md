@@ -66,7 +66,7 @@ To create that library, after downloading/cloning this project, **cd** into the 
 	
 and call `make`
 
-You should see a *libft.a* file and some object files (.o). That's it.
+You should see a *libft.a* file and some object files (.o).
 
 
 Now to clean up (removing the .o files and the .c files from the root), call `make clean`
