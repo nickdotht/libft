@@ -71,7 +71,7 @@ You should see a *libft.a* file and some object files (.o).
 
 Now to clean up (removing the .o files and the .c files from the root), call `make clean`
 
-#### How do I use the library?
+### How do I use the library?
 
 I added an example file called **example.c**, it's using the function **ft_putstr** to print "DON'T PANIC" to the screen. 
 
