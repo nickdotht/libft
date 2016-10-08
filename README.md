@@ -97,7 +97,7 @@ That's it. Now run it using `./a.out`
 
 ### How do I test it? How do I test my own implementations?
 
-To test the code we're going to be using @alelievvr's [Libft Unit Test][4]. There are [some][5] [good][6] [others][7] but I'll only be covering this one.
+To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There are [some][5] [good][6] [others][7] but I'll only be covering this one.
 
 #### 1. To test the code in this repo
 
@@ -105,23 +105,19 @@ To test the code we're going to be using @alelievvr's [Libft Unit Test][4]. Ther
 		
 		git clone https://github.com/R4meau/libft
 		cd libft/
-
 2. Copy all the source files to the root directory:
 	
 		cp -f libc-funcs/*.c .
 		cp -f additional-funcs/*.c .
 		cp -f bonus-funcs/*.c .
 		cp -f personal-funcs/*.c .
-		
 3. Run Make so you can build the library:
 		
 		make
-		
 4. Go back to the root directory and download @alelievr's Libft Unit Test:
 		
 		cd ..
 		git clone https://github.com/alelievr/libft-unit-test
-		
 5. Go into the test folder and run the test:
 
 		cd libft-unit-test/
@@ -136,13 +132,11 @@ You might want to have a go at this project too. If you never heard of Makefiles
 1. Create a directory for your project, make sure you call it `libft`:
 
 		mkdir libft
-		
 2. Clone this repo (don't name it libft) and copy the Makefile-sample as Makefile and libft.h to your own project:
 
 		git clone https://github.com/R4meau/libft r4-libft
 		cp r4-libft/Makefile-sample libft/Makefile
 		cp r4-libft/libft.h libft/
-
 3. Go to your project, [read the instructions][1] for the function you want to create, code it and uncomment it from the Makefile:
 
 		cd libft
@@ -152,16 +146,13 @@ You might want to have a go at this project too. If you never heard of Makefiles
 	As an example, after creating ft_memset as your first function, you go into the Makefile, remove the `#` in front of `FILES`, remove the `\` at the end of `ft_memset` and add a `#` in front of `ft_bzero`. 
 	
 	If it still looks complicated, **DON'T PANIC**, [just ask me][8] :)
-	
 4. Run Make so you can build the library:
 		
-		make
-		
+		make	
 5. Go back to the root directory and download @alelievr's Libft Unit Test:
 		
 		cd ..
 		git clone https://github.com/alelievr/libft-unit-test
-		
 6. Go into the test folder and run the test:
 
 		cd libft-unit-test/
