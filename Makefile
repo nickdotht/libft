@@ -79,6 +79,12 @@ OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
 
+copy:
+	cp -f libc-funcs/*.c .
+	cp -f additional-funcs/*.c .
+	cp -f bonus-funcs/*.c .
+	cp -f personal-funcs/*.c .
+
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
