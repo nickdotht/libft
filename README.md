@@ -7,13 +7,13 @@ My implementation of some of the Standard C Library functions including some add
 * [How does it work?](#how-does-it-work)
 * [How do I use the library?](#how-do-i-use-the-library)
 * [How do I test it? How do I test my own implementations?](#how-do-i-test-it-how-do-i-test-my-own-implementations)
-	1. [To test the code in this repo](#test)
-	2. [To test your own code](#test2)
+	1. [To test the code in this repo](#2-to-test-your-own-code)
+	2. [To test your own code](#2-to-test-your-own-code)
 
 ### What is libft?
 [Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the cursus.
 
-Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use **some** standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the cursus.*
+Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the cursus.*
 
 ### What's in it?
 
@@ -99,7 +99,7 @@ That's it. Now run it using `./a.out`
 
 To test the code we're going to be using @alelievvr's [Libft Unit Test][4]. There are [some][5] [good][6] [others][7] but I'll only be covering this one.
 
-##### 1. To test the code in this repo
+#### 1. To test the code in this repo
 
 1. Clone this repo and cd into it, make sure it's called `libft`:
 		
@@ -129,7 +129,7 @@ To test the code we're going to be using @alelievvr's [Libft Unit Test][4]. Ther
 
 If you did everything correctly you should get a cool list of tests showing you the function name and if it passed for each test.
 
-##### 2. To test your own code
+#### 2. To test your own code
 
 You might want to have a go at this project too. If you never heard of Makefiles, don't worry, you don't have to learn about it now. So go ahead and follow those steps:
 
