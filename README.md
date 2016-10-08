@@ -140,11 +140,12 @@ You might want to have a go at this project too. If you never heard of Makefiles
 2. Clone this repo (don't name it libft) and copy the Makefile-sample as Makefile and libft.h to your own project:
 
 		git clone https://github.com/R4meau/libft r4-libft
-		cp r4-libft/Makefile-sample my-libft/Makefile
-		cp r4-libft/libft.h my-libft/
+		cp r4-libft/Makefile-sample libft/Makefile
+		cp r4-libft/libft.h libft/
 
-3. Code the function and uncomment it from the Makefile:
+3. Go to your project, [read the instructions][1] for the function you want to create, code it and uncomment it from the Makefile:
 
+		cd libft
 		vim ft_memset.c
 		vim Makefile
 		
