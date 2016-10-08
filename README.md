@@ -66,14 +66,12 @@ My code is not the best, but it passed all the 42 tests successfully.
 
 The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
 
-To create that library, after downloading/cloning this project, **cd** into the project, copy all the files from the sub folders to the root directory:
+To create that library, after downloading/cloning this project, **cd** into the project, copy all the files from the sub folders to the root directory and finally, call make:
 
-	cp -f libc-funcs/*.c .
-	cp -f additional-funcs/*.c .
-	cp -f bonus-funcs/*.c .
-	cp -f personal-funcs/*.c .
-	
-and call `make`
+	git clone https://github.com/R4meau/libft
+	cd libft
+	make copy
+	make
 
 You should see a *libft.a* file and some object files (.o).
 
@@ -107,10 +105,7 @@ To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There
 		cd libft/
 2. Copy all the source files to the root directory:
 	
-		cp -f libc-funcs/*.c .
-		cp -f additional-funcs/*.c .
-		cp -f bonus-funcs/*.c .
-		cp -f personal-funcs/*.c .
+		make copy
 3. Run Make so you can build the library:
 		
 		make
@@ -158,7 +153,7 @@ You might want to have a go at this project too. If you never heard of Makefiles
 		cd libft-unit-test/
 		make f
 
-That's it! If you're having some problems, just [send me a tweet][8]. If you think your problem is due to my code or this README, [create a new issue](9). I'll definitely check it out.
+That's it! If you're having some problems, just [send me a tweet][8]. If you think your problem is due to my code or this README, [create a new issue][9]. I'll definitely check it out.
 
 Enjoy.
 
