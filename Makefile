@@ -77,7 +77,7 @@ FILES		= ft_memset.c \
 				ft_capitalize.c
 OBJ			= $(FILES:%.c=%.o)
 
-all: $(NAME)
+all: copy $(NAME) clean
 
 copy:
 	cp -f libc-funcs/*.c .
