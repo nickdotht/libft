@@ -77,8 +77,9 @@ FILES		= ft_memset.c \
 				ft_capitalize.c
 OBJ			= $(FILES:%.c=%.o)
 
-all: $(NAME)
+all: copy $(NAME) clean
 
+# This will copy all c files to the top directory
 copy:
 	cp -f libc-funcs/*.c .
 	cp -f additional-funcs/*.c .
