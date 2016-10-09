@@ -79,6 +79,7 @@ OBJ			= $(FILES:%.c=%.o)
 
 all: copy $(NAME) clean
 
+# This will copy all c files to the top directory
 copy:
 	cp -f libc-funcs/*.c .
 	cp -f additional-funcs/*.c .

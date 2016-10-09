@@ -77,7 +77,14 @@ CFLAGS		= -Wall -Werror -Wextra -I. -c
 				ft_capitalize.c
 OBJ			= $(FILES:%.c=%.o)
 
-all: $(NAME)
+all: copy $(NAME) clean
+
+# This will copy all c files to the top directory
+copy:
+	cp -f libc-funcs/*.c .
+	cp -f additional-funcs/*.c .
+	cp -f bonus-funcs/*.c .
+	cp -f personal-funcs/*.c .
 
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
