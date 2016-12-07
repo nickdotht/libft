@@ -22,7 +22,7 @@ As you can see from the [Project instructions][1], there are 4 sections:
 1.  **Libc Functions:** Some of the standard C functions
 2.  **Additional functions:** Functions 42 deems will be useful for later projects
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
-4.  **Personal Functions:** Functions I believe will be useful later
+4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
 
 Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
@@ -162,7 +162,7 @@ Enjoy.
 
 [1]: https://github.com/R4meau/libft/blob/master/libft.en.pdf "Libft PDF"
 [2]: http://42.us.org "42 USA"
-[3]: https://github.com/R4meau/libft/wiki
+[3]: https://github.com/R4meau/libft/wiki/Personal-Functions-Documentation
 [4]: https://github.com/alelievr/libft-unit-test
 [5]: https://github.com/yyang42/moulitest
 [6]: https://github.com/QuentinPerez/Maintest/tree/master/libft
