@@ -6,7 +6,7 @@
 #    By: jrameau <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2016/09/25 19:32:38 by jrameau          ###   ########.fr        #
+#    Updated: 2016/12/06 23:42:54 by jrameau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,12 +79,6 @@ OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
 
-copy:
-	cp -f libc-funcs/*.c .
-	cp -f additional-funcs/*.c .
-	cp -f bonus-funcs/*.c .
-	cp -f personal-funcs/*.c .
-
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
@@ -95,7 +89,6 @@ $(OBJ): $(FILES)
 
 clean:
 	rm -f $(OBJ)
-	rm -f $(FILES) # comment this line if you don't want it to remove the source files from the root
 
 fclean: clean
 	rm -f $(NAME)
