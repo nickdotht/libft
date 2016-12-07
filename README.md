@@ -7,13 +7,13 @@ My implementation of some of the Standard C Library functions including some add
 * [How does it work?](#how-does-it-work)
 * [How do I use the library?](#how-do-i-use-the-library)
 * [How do I test it? How do I test my own implementations?](#how-do-i-test-it-how-do-i-test-my-own-implementations)
-	1. [To test the code in this repo](#2-to-test-your-own-code)
+	1. [To test the code in this repo](#1-to-test-the-code-in-this-repo)
 	2. [To test your own code](#2-to-test-your-own-code)
 
 ### What is libft?
-[Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the cursus.
+[Libft][1] is an individual project at [42][2] that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
-Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the cursus.*
+Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.*
 
 ### What's in it?
 
@@ -31,11 +31,11 @@ bzero		| ft_memdel		| ft_lstdelone	| ft_countwords
 memcpy		| ft_strnew		| ft_lstdel		| ft_islower    
 memccpy		| ft_strdel		| ft_lstadd		| ft_isupper    
 memmove		| ft_strclr		| ft_lstiter	| ft_strndup    
-memchr		| ft_striter	| ft_lstmap		|
-memcmp		| ft_striteri	|
-strlen		| ft_strmap		|
-strdup		| ft_strmapi	|
-strcpy		| ft_strequ		|
+memchr		| ft_striter	| ft_lstmap		| ft_lst_reverse.c
+memcmp		| ft_striteri	|				| ft_realloc.c
+strlen		| ft_strmap		|				| ft_strjoinch.c
+strdup		| ft_strmapi	|				| ft_strnchr.c
+strcpy		| ft_strequ		|				| ft_copyuntil.c
 strncpy		| ft_strnequ	|
 strcat		| ft_strsub		|
 strlcat		| ft_strjoin	|
@@ -57,8 +57,9 @@ tolower		|
 
 Notes:
 
-- All the files and functions are namespaced with an **ft** in front. (It stands for Fourty Two)
+- All the files and functions are namespaced with an **ft** in front. It stands for Fourty Two
 - The project instructions require that we put all the source files in the root directory but for the sake of this Github repo, I separate them into sub folders.
+- I update this list almost every month with new personal functions. If you don't know what a function does, refer to the [Wiki][3], where I document all my personal functions.
 
 My code is not the best, but it passed all the 42 tests successfully.
 
@@ -77,6 +78,8 @@ You should see a *libft.a* file and some object files (.o).
 
 
 Now to clean up (removing the .o files and the .c files from the root), call `make clean`
+
+**WARNING:** `make clean` will delete all your files from your root directory. Do not run it if you're using the `Makefile` file. This is why I added the `Makefile-sample` file.
 
 ### How do I use the library?
 
@@ -118,11 +121,11 @@ To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There
 		cd libft-unit-test/
 		make f
 
-If you did everything correctly you should get a cool list of tests showing you the function name and if it passed for each test.
+If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
 
 #### 2. To test your own code
 
-You might want to have a go at this project too. If you never heard of Makefiles, don't worry, you don't have to learn about it now. So go ahead and follow those steps:
+You might want to have a go at this project too. If you've never heard of Makefiles, don't worry, you don't have to learn about it now. So go ahead and follow those steps:
 
 1. Create a directory for your project, make sure you call it `libft`:
 
@@ -157,9 +160,9 @@ That's it! If you're having some problems, just [send me a tweet][8]. If you thi
 
 Enjoy.
 
-[1]: https://cdn.intra.42.fr/pdf/pdf/775/libft.en.pdf "Libft PDF"
+[1]: https://github.com/R4meau/libft/blob/master/libft.en.pdf "Libft PDF"
 [2]: http://42.us.org "42 USA"
-[3]: http://www.asciitable.com/ "The ASCII Table"
+[3]: https://github.com/R4meau/libft/wiki
 [4]: https://github.com/alelievr/libft-unit-test
 [5]: https://github.com/yyang42/moulitest
 [6]: https://github.com/QuentinPerez/Maintest/tree/master/libft
