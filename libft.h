@@ -12,21 +12,9 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# ifndef STRING_HEADER
-#  define STRING_HEADER
-#  include <string.h>
-# endif
-
-# ifndef UNISTD_HEADER
-#  define UNISTD_HEADER
-#  include <unistd.h>
-# endif
-
-# ifndef STDLIB_HEADER
-#  define STDLIB_HEADER
-#  include <stdlib.h>
-# endif
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
@@ -117,5 +105,10 @@ int					ft_islower(int c);
 int					ft_countwords(char const *str, char c);
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_capitalize(char *s);
+t_list				*ft_lst_reverse(t_list *alst);
+void				*ft_realloc(void *ptr, size_t size);
+char				*ft_strjoinch(char const *s1, char c);
+char				*ft_strnchr(char *s, char c, int offset);
+int					ft_copyuntil(char **dst, char *src, char c);
 
 #endif
