@@ -6,7 +6,7 @@
 #    By: jrameau <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2016/09/25 19:32:38 by jrameau          ###   ########.fr        #
+#    Updated: 2016/12/06 23:35:44 by jrameau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,12 @@ FILES		= ft_memset.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
 				ft_strndup.c \
-				ft_capitalize.c
+				ft_capitalize.c \
+				ft_lst_reverse.c \
+				ft_realloc.c \
+				ft_strjoinch.c \
+				ft_strnchr.c \
+				ft_copyuntil.c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
