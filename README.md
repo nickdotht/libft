@@ -161,7 +161,7 @@ That's it! If you're having some problems, just [send me a tweet][8]. If you thi
 
 ## Example usage
 
-This is a list of my projects that use Libft excessively:
+This is a list of my projects that use Libft extensively:
 
 * [get_next_line](https://github.com/r4meau/get_next_line)
 
