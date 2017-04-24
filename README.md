@@ -164,6 +164,7 @@ That's it! If you're having some problems, just [send me a tweet][8]. If you thi
 This is a list of my projects that use Libft extensively:
 
 * [get_next_line](https://github.com/r4meau/get_next_line)
+* [ft_ls](https://github.com/r4meau/ft_ls)
 
 Enjoy.
 
