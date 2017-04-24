@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jrameau <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/21 14:58:27 by jrameau           #+#    #+#              #
-#    Updated: 2016/12/06 23:35:44 by jrameau          ###   ########.fr        #
+#    Updated: 2017/04/24 03:49:23 by jrameau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,12 @@ FILES		= ft_memset.c \
 				ft_realloc.c \
 				ft_strjoinch.c \
 				ft_strnchr.c \
-				ft_copyuntil.c
+				ft_copyuntil.c \
+				ft_strstartswith.c \
+				ft_intlen.c \
+				ft_strendswith.c \
+				ft_pathjoin.c \
+				ft_lstaddback.c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)
