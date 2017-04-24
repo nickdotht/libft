@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrameau <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 21:30:24 by jrameau           #+#    #+#             */
-/*   Updated: 2016/09/24 04:12:58 by jrameau          ###   ########.fr       */
+/*   Updated: 2017/04/24 03:15:46 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,9 @@ void				*ft_realloc(void *ptr, size_t size);
 char				*ft_strjoinch(char const *s1, char c);
 char				*ft_strnchr(char *s, char c, int offset);
 int					ft_copyuntil(char **dst, char *src, char c);
-
+int					ft_strstartswith(char *s1, char *s2);
+int					ft_intlen(int num);
+int					ft_strendswith(char *s1, char *s2);
+char				*ft_pathjoin(char *p1, char *p2);
+void				ft_lstaddback(t_list **alst, t_list *new);
 #endif

@@ -32,16 +32,16 @@ bzero		| ft_memdel		| ft_lstdelone	| ft_countwords
 memcpy		| ft_strnew		| ft_lstdel		| ft_islower    
 memccpy		| ft_strdel		| ft_lstadd		| ft_isupper    
 memmove		| ft_strclr		| ft_lstiter	| ft_strndup    
-memchr		| ft_striter	| ft_lstmap		| ft_lst_reverse.c
-memcmp		| ft_striteri	|				| ft_realloc.c
-strlen		| ft_strmap		|				| ft_strjoinch.c
-strdup		| ft_strmapi	|				| ft_strnchr.c
-strcpy		| ft_strequ		|				| ft_copyuntil.c
-strncpy		| ft_strnequ	|
-strcat		| ft_strsub		|
-strlcat		| ft_strjoin	|
-strchr		| ft_strtrim	|
-strrchr		| ft_strsplit	|
+memchr		| ft_striter	| ft_lstmap		| ft_lst_reverse
+memcmp		| ft_striteri	|				| ft_realloc
+strlen		| ft_strmap		|				| ft_strjoinch
+strdup		| ft_strmapi	|				| ft_strnchr
+strcpy		| ft_strequ		|				| ft_copyuntil
+strncpy		| ft_strnequ	|			| ft_strstartswith
+strcat		| ft_strsub		| | ft_intlen
+strlcat		| ft_strjoin	| | ft_strendswith
+strchr		| ft_strtrim	| | ft_pathjoin
+strrchr		| ft_strsplit	| | ft_lstaddback
 strstr		| ft_itoa		|
 strnstr		| ft_putchar	|
 strcmp		| ft_putstr		|
