@@ -165,6 +165,7 @@ This is a list of my projects that use Libft extensively:
 
 * [get_next_line](https://github.com/r4meau/get_next_line)
 * [ft_ls](https://github.com/r4meau/ft_ls)
+* [ft_contrast](https://github.com/R4meau/ft_contrast)
 
 Enjoy.
 
