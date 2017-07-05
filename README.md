@@ -167,6 +167,7 @@ This is a list of my projects that use Libft extensively:
 * [ft_ls](https://github.com/r4meau/ft_ls)
 * [ft_contrast](https://github.com/R4meau/ft_contrast)
 * [minishell](https://github.com/R4meau/minishell)
+* [ft_select](https://github.com/R4meau/ft_select)
 
 Enjoy.
 
