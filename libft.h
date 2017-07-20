@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jrameau <jrameau@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: jrameau <jrameau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/21 21:30:24 by jrameau           #+#    #+#             */
-/*   Updated: 2017/04/24 03:15:46 by jrameau          ###   ########.fr       */
+/*   Updated: 2017/07/01 16:44:48 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+# define BUFF_SIZE 100
+# define MALLCHECK(x) if (!x) return (-1);
+# define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\r' || x == '\f')
 
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
@@ -106,7 +110,7 @@ int					ft_countwords(char const *str, char c);
 char				*ft_strndup(const char *s1, size_t n);
 char				*ft_capitalize(char *s);
 t_list				*ft_lst_reverse(t_list *alst);
-void				*ft_realloc(void *ptr, size_t size);
+void				*ft_realloc(void *ptr, size_t prev_size, size_t new_size);
 char				*ft_strjoinch(char const *s1, char c);
 char				*ft_strnchr(char *s, char c, int offset);
 int					ft_copyuntil(char **dst, char *src, char c);
@@ -115,4 +119,17 @@ int					ft_intlen(int num);
 int					ft_strendswith(char *s1, char *s2);
 char				*ft_pathjoin(char *p1, char *p2);
 void				ft_lstaddback(t_list **alst, t_list *new);
+int					get_next_line(const int fd, char **line);
+void				ft_putnstr(char *str, int n);
+char				*ft_strreplace(char *str, char *term, char *replace_by);
+int					ft_isemptystr(char *str, int consider_space);
+char				**ft_strsplitall(char const *s);
+int					ft_countwordsall(char const *str);
+void				ft_freestrarr(char **arr);
+char				*ft_strjoincl(char *s1, char *s2, int free_both);
+char				*ft_strjoinchcl(char *s1, char c);
+int					ft_count2darray(char **arr);
+int					ft_strarrmax(char **arr);
+char				*ft_get_parent_path(char *path);
+
 #endif

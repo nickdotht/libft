@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_freestrarr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <jrameau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/21 01:11:53 by jrameau           #+#    #+#             */
-/*   Updated: 2017/05/20 21:46:33 by jrameau          ###   ########.fr       */
+/*   Created: 2017/05/18 16:00:12 by jrameau           #+#    #+#             */
+/*   Updated: 2017/05/18 16:36:33 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t prev_size, size_t new_size)
+void	ft_freestrarr(char **arr)
 {
-	void	*new;
+	int i;
 
-	if (!ptr)
-		return (NULL);
-	if (!(new = ft_memalloc(new_size)))
+	if (!arr)
+		return ;
+	i = -1;
+	while (arr[++i])
 	{
-		free(ptr);
-		return (NULL);
+		free(arr[i]);
 	}
-	ft_memcpy(new, ptr, prev_size < new_size ? prev_size : new_size);
-	free(ptr);
-	return (new);
+	free(arr);
+	arr = NULL;
 }

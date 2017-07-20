@@ -84,7 +84,19 @@ FILES		= ft_memset.c \
 				ft_intlen.c \
 				ft_strendswith.c \
 				ft_pathjoin.c \
-				ft_lstaddback.c
+				ft_lstaddback.c \
+				get_next_line.c \
+				ft_putnstr.c \
+				ft_strreplace.c \
+				ft_isemptystr.c \
+				ft_strsplitall.c \
+				ft_countwordsall.c \
+				ft_freestrarr.c \
+				ft_strjoincl.c \
+				ft_strjoinchcl.c \
+				ft_count2darray.c \
+				ft_strarrmax.c \
+				ft_get_parent_path.c
 OBJ			= $(FILES:%.c=%.o)
 
 all: $(NAME)

@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_isemptystr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <jrameau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/21 01:11:53 by jrameau           #+#    #+#             */
-/*   Updated: 2017/05/20 21:46:33 by jrameau          ###   ########.fr       */
+/*   Created: 2017/05/11 00:03:25 by jrameau           #+#    #+#             */
+/*   Updated: 2017/05/21 01:09:11 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t prev_size, size_t new_size)
+int		ft_isemptystr(char *str, int consider_space)
 {
-	void	*new;
+	int		i;
+	int		min;
+	int		max;
 
-	if (!ptr)
-		return (NULL);
-	if (!(new = ft_memalloc(new_size)))
+	i = -1;
+	min = 32 + consider_space;
+	max = 126;
+	while (str[++i])
 	{
-		free(ptr);
-		return (NULL);
+		if (str[i] >= min && str[i] <= max)
+			return (0);
 	}
-	ft_memcpy(new, ptr, prev_size < new_size ? prev_size : new_size);
-	free(ptr);
-	return (new);
+	return (1);
 }

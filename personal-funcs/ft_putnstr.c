@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_putnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <jrameau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/21 01:11:53 by jrameau           #+#    #+#             */
-/*   Updated: 2017/05/20 21:46:33 by jrameau          ###   ########.fr       */
+/*   Created: 2017/04/29 13:50:34 by jrameau           #+#    #+#             */
+/*   Updated: 2017/05/21 01:10:08 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t prev_size, size_t new_size)
+void	ft_putnstr(char *str, int n)
 {
-	void	*new;
+	int		i;
 
-	if (!ptr)
-		return (NULL);
-	if (!(new = ft_memalloc(new_size)))
+	i = -1;
+	if (n < 0)
 	{
-		free(ptr);
-		return (NULL);
+		while (str[++i] && i < (int)ft_strlen(str) + n)
+			ft_putchar(str[i]);
 	}
-	ft_memcpy(new, ptr, prev_size < new_size ? prev_size : new_size);
-	free(ptr);
-	return (new);
+	else
+	{
+		while (str[++i] && i < n)
+			ft_putchar(str[i]);
+	}
 }

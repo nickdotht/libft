@@ -42,23 +42,23 @@ strcat		| ft_strsub		| | ft_intlen
 strlcat		| ft_strjoin	| | ft_strendswith
 strchr		| ft_strtrim	| | ft_pathjoin
 strrchr		| ft_strsplit	| | ft_lstaddback
-strstr		| ft_itoa		|
-strnstr		| ft_putchar	|
-strcmp		| ft_putstr		|
-strncmp		| ft_putendl	|
-atoi		| ft_putnbr		|
-isalpha		| ft_putchar_fd	|
-isdigit		| ft_putstr_fd	|
-isalnum		| ft_putendl_fd	|
-isascii		| ft_putnbr_fd	|
-isprint		|
-toupper		|
-tolower		|
+strstr		| ft_itoa		| | get_next_line
+strnstr		| ft_putchar	| | ft_putnstr
+strcmp		| ft_putstr		| | ft_strreplace
+strncmp		| ft_putendl	| | ft_isemptystr
+atoi		| ft_putnbr		| | ft_strsplitall
+isalpha		| ft_putchar_fd	| | ft_countwordsall
+isdigit		| ft_putstr_fd	| | ft_freestrarr
+isalnum		| ft_putendl_fd	| | ft_strjoincl
+isascii		| ft_putnbr_fd	| | ft_strjoinchcl
+isprint		|| | ft_count2darray
+toupper		| | | ft_strarrmax
+tolower		| | | ft_get_parent_path
 
 
 Notes:
 
-- All the files and functions are namespaced with an **ft** in front. It stands for Fourty Two
+- Most of the the files and function names are namespaced with an **ft** in front. It stands for Fourty Two
 - The project instructions require that we put all the source files in the root directory but for the sake of this Github repo, I separate them into sub folders.
 - I update this list almost every month with new personal functions. If you don't know what a function does, refer to the [Wiki][3], where I document all my personal functions.
 
@@ -90,7 +90,7 @@ If you try to compile it with gcc using `gcc example.c` you will get an *undefin
 
 You have to tell the file where your library resides and which library it is using:
 
-`gcc -L. -lft example.c`
+`gcc example.c -L. -lft`
 
 -L takes the path to your library. `.` in this case<br>
 -l takes the name of your library. This is the set of characters that come after `lib` in your library name.

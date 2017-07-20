@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc.c                                       :+:      :+:    :+:   */
+/*   ft_strarrmax.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrameau <jrameau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/21 01:11:53 by jrameau           #+#    #+#             */
-/*   Updated: 2017/05/20 21:46:33 by jrameau          ###   ########.fr       */
+/*   Created: 2017/06/27 22:04:11 by jrameau           #+#    #+#             */
+/*   Updated: 2017/07/02 17:56:40 by jrameau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-void	*ft_realloc(void *ptr, size_t prev_size, size_t new_size)
+int		ft_strarrmax(char **arr)
 {
-	void	*new;
+	int		i;
+	int		max;
+	int		curr_len;
 
-	if (!ptr)
-		return (NULL);
-	if (!(new = ft_memalloc(new_size)))
+	i = -1;
+	max = 0;
+	while (arr[++i])
 	{
-		free(ptr);
-		return (NULL);
+		curr_len = ft_strlen(arr[i]);
+		if (curr_len > max)
+			max = curr_len;
 	}
-	ft_memcpy(new, ptr, prev_size < new_size ? prev_size : new_size);
-	free(ptr);
-	return (new);
+	return (max);
 }
