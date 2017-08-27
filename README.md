@@ -169,6 +169,10 @@ This is a list of my projects that use Libft extensively:
 * [minishell](https://github.com/R4meau/minishell)
 * [ft_select](https://github.com/R4meau/ft_select)
 
+## Sponsors
+
+<a href="https://app.codesponsor.io/link/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft" rel="nofollow"><img src="https://app.codesponsor.io/embed/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
+
 Enjoy.
 
 [1]: https://github.com/R4meau/libft/blob/master/libft.en.pdf "Libft PDF"
